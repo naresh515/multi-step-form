@@ -36,7 +36,6 @@ nextBtns.forEach(btn => {
         const firstName = $('#firstName').val();
         const lastName = $('#lastName').val();
         if (firstName === "" || lastName == "") {
-            console.log("fill this");
         } else {
             formStepsNum++;
             updateFormSteps();
@@ -50,8 +49,7 @@ nextBtns1.forEach(btn => {
     btn.addEventListener("click", function () {
         const mob = $('#phoneNumber').val();
         const email = $('#email').val();
-        if (mob === "" || email == "") {
-            console.log("fill this");
+        if (mob === "" || mob.length < 10 || mob.length > 10 || email == "") {
         } else {
             formStepsNum++;
             updateFormSteps();
@@ -65,7 +63,6 @@ nextBtns2.forEach(btn => {
     btn.addEventListener("click", function () {
         const birth = $('#birthdate').val();
         if (birth === "") {
-            console.log("fill this");
         } else {
             formStepsNum++;
             updateFormSteps();
@@ -96,14 +93,14 @@ $(document).ready(function () {
 
         var user = $('#firstName').val();
         if (user == "") {
-            $("#show_error").html('** The username must be field between 3 and 25 latters');
+            $("#show_error").html('** The firstName must be field between 3 to 25 letters');
         } else {
             $("#show_error").empty()
         }
 
         var user1 = $('#lastName').val();
         if (user1 == "") {
-            $("#show_error1").html('** The username must be field between 3 and 25 latters');
+            $("#show_error1").html('** The lastName must be field between 3 to 25 letters');
         } else {
             $("#show_error1").empty()
         }
@@ -112,7 +109,7 @@ $(document).ready(function () {
     $("#submit1").click(function (e) {
         e.preventDefault()
         var mob = $('#phoneNumber').val();
-        if (mob == "") {
+        if (mob == "" || mob.length < 10 || mob.length > 10) {
             $("#show_error3").html('** The Mobile No. length will be 10 Number');
         } else {
             $("#show_error3").empty()
