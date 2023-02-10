@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: rgb(51, 85, 170);
+}
+
+body {
+    background-image: linear-gradient(rgb(241 108 179), #2d2df3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.form {
+    background-color: white;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 25px;
+    min-height: 90vh;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.input-group {
+    margin: 1.5rem 0;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    transform-origin: top;
+}
+
+.btn {
+    padding: 10px 30px;
+    display: block;
+    text-decoration: none;
+    width: min-content;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: deeppink;
+    color: white;
+}
+
+.btn-next {
+    float: right;
+    padding: 10px 50px;
+}
+
+.btn-prev {
+    float: left;
+}
+
+.btn-complete {
+    float: right;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+}
+
+.progress-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+}
+
+.progress:active::after {
+    background-color: deeppink;
+}
+
+#progress {
+    content: "";
+    position: absolute;
+    top: 29px;
+    height: 3px;
+    left: 30px;
+    width: 21%;
+    background-color: black;
+}
+
+#progress1 {
+    content: "";
+    position: absolute;
+    top: 29px;
+    height: 3px;
+    width: 22%;
+    background-color: black;
+    left: 39%;
+}
+
+#progress2 {
+    content: "";
+    position: absolute;
+    top: 29px;
+    height: 3px;
+    width: 22%;
+    background-color: black;
+    right: 30px;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    margin-top: 15px;
+}
+
+.progress-step::after {
+    content: "";
+    width: 77px;
+    height: 3px;
+    position: absolute;
+    top: 29px;
+    left: 30px;
+    background-color: #181818;
+    overflow: hidden;
+}
+
+.progress-step.active::before {
+    color: deeppink;
+}
+
+.progress-step::before {
+    content: attr(data-title);
+    position: absolute;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    top: -25px;
+}
+
+.progress-step.active {
+    background-color: deeppink;
+    color: white;
+    border: none;
+}
+
+#show_error,
+#show_error1,
+#show_error2,
+#show_error3,
+#show_error4 {
+    width: 100%;
+    color: red;
+}

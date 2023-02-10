@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform">
+            <div class="form">
+                <h1>Signup Form</h1>
+                <div class="progress-bar">
+                    <div class="progress-step active" data-title="Name">1
+                        <div class="progress active" id="progress"></div>
+                    </div>
+                    <div class="progress-step" data-title="Contact">2
+                        <div class="progress" id="progress1"></div>
+                    </div>
+                    <div class="progress-step" data-title="Birth">3
+                        <div data-title="Birth" class="progress" id="progress2"></div>
+                    </div>
+                    <div class="progress-step" data-title="submit">4</div>
+
+                </div>
+                <div class="form-step active">
+                    <h3>Name-info</h3>
+                        <div class="input-group">
+                            <label for="full-name">First Name</label>
+                            <input id="firstName" type="text" name="firstname">
+                            <div id="show_error"></div>
+                        </div>
+                        <div class="input-group">
+                            <label for="full-name">Last Name</label>
+                            <input id="lastName" type="text" name="lastname">
+                            <div id="show_error1"></div>
+                        </div>
+                        <div class="">
+                            <a onclick="myFunction()" class="btn btn-next" id="submit">Next</a>
+                        </div>
+                </div>
+                <div class="form-step">
+                    <h3>Contact-info</h3>
+                    <div class="input-group">
+                        <label for="address">Email Address</label>
+                        <input id="email" type="email" name="address">
+                        <div id="show_error2"></div>
+                    </div>
+                    <div class="input-group">
+                        <label for="number">Phone Number</label>
+                        <input id="phoneNumber" type="number" name="Phone Number">
+                        <div id="show_error3"></div>
+                    </div>
+                    <div class="">
+                        <a class="btn btn-prev">Previous</a>
+                    </div>
+                    <div class="">
+                        <a onclick="myFunction()" class="btn btn-next" id="submit1">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <h3>Birth-info</h3>
+                    <div class="input-group">
+                        <label for="birth-date">Birth Date</label>
+                        <input id="birthdate" type="date" name="birth-date">
+                        <div id="show_error4"></div>
+                    </div>
+                    <div class="">
+                        <a class="btn btn-prev">Previous</a>
+                    </div>
+                    <div class="">
+                        <a onclick="myFunction()" class="btn btn-next" id="submit2">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <h3>Submit</h3>
+                    <p>All Done! Thank You. We Hope You Will Enjoy This App</p>
+                    <p>Click On previous Button For check everything right!</p>
+                    <div class="">
+                        <a class="btn btn-prev">Previous</a>
+                    </div>
+                    <div class="btn-group">
+                        <input type="submit" value="Complete" name="complete" onclick="myFunction()"
+                            class="btn btn-complete">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./style.js"></script>
+
+</body>
+
+</html>
